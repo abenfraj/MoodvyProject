@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import ProfilePage from "./pages/ProfilePage";
 import WelcomePage from "./pages/WelcomePage";
 import * as React from 'react'
+import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
 export const ROUTE = {
@@ -14,7 +15,7 @@ export const ROUTE = {
       MAIN: "Todo"
   }
 };
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 export default function App() {
   return (
     <Stack.Navigator initialRouteName={ROUTE.WELCOME_TAB.MAIN}>
