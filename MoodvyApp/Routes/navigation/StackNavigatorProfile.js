@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { ROUTE } from "./Routes/constant/CRoute";
-import ProfilePage from "./pages/ProfilePage";
-import WelcomePage from "./pages/WelcomePage";
+import { ROUTE } from "../constant/CRoute";
+import ProfilePage from "../../pages/ProfilePage";
+import WelcomePage from "../../pages/WelcomePage";
 import * as React from 'react'
 
 const Stack = createNativeStackNavigator();

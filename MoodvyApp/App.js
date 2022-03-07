@@ -1,9 +1,26 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import ProfilePage from "./pages/ProfilePage";
+import WelcomePage from "./pages/WelcomePage";
+import * as React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
 
+export const ROUTE = {
+  WELCOME_TAB : {
+      MAIN: "Accueil",
+      PROFIL: "Profil"
+  },
+  TODO_TAB: {
+      MAIN: "Todo"
+  }
+};
+const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-"rayan"
+    <Stack.Navigator initialRouteName={ROUTE.WELCOME_TAB.MAIN}>
+      <Stack.Screen name={ROUTE.WELCOME_TAB.MAIN} component={WelcomePage} />
+      <Stack.Screen name={ROUTE.WELCOME_TAB.PROFIL} component={ProfilePage} />
+    </Stack.Navigator>
   );
 };
 // https://prod.liveshare.vsengsaas.visualstudio.com/join?CFA60F1244508BFD006E681A6B706C20DF94
